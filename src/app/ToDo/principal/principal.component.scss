@@ -1,0 +1,91 @@
+.principal{
+    
+    &__titulo{
+        box-shadow: 0rem 0rem 2rem 0.5rem rgba(0, 0, 0, 0.5);
+        color: white;
+        text-shadow: black;
+        position: absolute;
+        z-index: 1;
+        left: 100rem;
+        top:2rem;
+        background-color: #4F4557;
+        text-align: center;
+        width: 50rem;
+        border-radius: 2rem;
+        
+
+        &__nombre{
+            margin-top: 5rem;
+            font-size: 8rem;
+            text-shadow: 0rem 0rem 0.5rem black;
+        }
+
+        &__boton{
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__recordatorio{
+        width: 100rem;
+        // background-color: #443C68;
+        font-size: 3.25rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        border-radius: 2rem;
+        position: absolute;
+        z-index: 2;
+
+        &__tabla{
+            color: white;
+            // margin: 0 auto;
+            text-align: center;
+            border-spacing: 3rem;
+            box-shadow: 0rem 0rem 2rem 0.5rem rgba(0, 0, 0, 0.5);
+            &__filas{
+
+                &__td{
+                    word-break: break-all !important;
+                    white-space: nowrap !important; 
+
+                    &__boton{
+
+                    }
+                }
+            }
+        } 
+    }
+
+    &__editor{
+        box-shadow: 0rem 0rem 2rem 0.5rem rgba(0, 0, 0, 0.5);
+        color: white;
+        text-shadow: black;
+        position: absolute;
+        z-index: 1;
+        left: 100rem;
+        top: 30rem;
+        // background-color: #4F4557;
+        text-align: center;
+        width: 50rem;
+        height: 45rem;
+        border-radius: 2rem;
+
+        &__nombre{
+            margin-top: 1rem;
+            font-size: 4rem;
+            text-shadow: 0rem 0rem 0.5rem black;
+        }
+
+        &__formulario{
+            text-align: center;
+            font-size: 2rem;
+            width: 45rem;
+            margin: 0 auto;
+
+            &__datos{
+                display: flex;
+                flex-direction: column; 
+                gap: 1rem
+            }
+        }
+    }
+}

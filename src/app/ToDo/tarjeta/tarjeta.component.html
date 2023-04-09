@@ -1,0 +1,36 @@
+<div class="principal contenedor">
+    <div class="principal__titulo">
+        <h1>Creador de Tareas</h1>
+    </div>
+    <div class="principal__formulario">
+        <form class="principal__formulario__datos" ngSubmit="agregar()" [formGroup]="miFormulario" >
+            <label>Nombre:</label>
+            <input class="principal__formulario__datos__boton" formControlName="nombre" type="text">
+        
+            <label>Accion:</label>
+            <input class="principal__formulario__datos__boton" formControlName="accion" type="text">
+        
+            <label>Responsable:</label>
+            <input class="principal__formulario__datos__boton" formControlName="responsable" type="text">
+        
+            <label>Duracion:</label>
+            <input class="principal__formulario__datos__boton" formControlName="duracion" type="text">
+        
+            <label>Estado:</label>
+            <select class="principal__formulario__datos__boton" formControlName="estado" name="" id="">
+                <option value="">Seleccione...</option>
+                <option value="Inicio">Inicio</option>
+                <option value="En Progreso">En Progreso</option>
+                <option value="Terminado">Terminado</option>
+            </select>
+        </form>
+        <div class="principal__boton">
+            <button type="submit" (click)="agregar()" class="">Guardar</button>
+            <button type="button" routerLink="/HomePage" class="">Regresar</button>
+        </div>
+    </div>
+    
+
+    
+</div>
+

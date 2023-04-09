@@ -1,0 +1,59 @@
+<div class="principal contenedor">
+    <div class="principal__titulo">
+        <h1 class="principal__titulo__nombre">ToDO</h1>
+        <button routerLink="/Tarjeta" class="principal__titulo__boton">Nueva Tarea</button>
+    </div>
+    <div class="principal__recordatorio">
+        <table class="principal__recordatorio__tabla">
+            <tr>
+                <th>Nombre:</th>
+                <th>Accion:</th>
+                <th>Responsable:</th>
+                <th>Duracion:</th>
+                <th>Estado:</th>
+            </tr>
+            <tr class="principal__recordatorio__tabla__filas" *ngFor="let tarea of tareas">
+                <td class="principal__recordatorio__tabla__filas__td" >{{tarea.nombre}}</td>
+                <td class="principal__recordatorio__tabla__filas__td" >{{tarea.accion}} </td>
+                <td class="principal__recordatorio__tabla__filas__td" >{{tarea.responsable}}</td>
+                <td class="principal__recordatorio__tabla__filas__td" >{{tarea.duracion}}</td>
+                <td class="principal__recordatorio__tabla__filas__td" >{{tarea.estado}}</td>
+                <td class="principal__recordatorio__tabla__filas__td__boton" ><button (click)="editando(tarea.id)">Editar</button></td>
+                <td class="principal__recordatorio__tabla__filas__td" ><button (click)="eliminar(tarea.id)">Eliminar</button></td>
+            </tr>
+        </table>
+
+        <div *ngIf="!editar" class="principal__editor">
+            <h1 class="principal__editor__nombre">Editor ToDO</h1>
+            <button (click)="guardarCambios(tareaEdicion)" class="principal__editor__boton">Guardar Cambios</button>
+            
+            <div class="principal__editor__formulario">
+                <form class="principal__editor__formulario__datos" [formGroup]="miFormulario1">
+                    <label>Nombre:</label>
+                    <input class="principal__formulario__datos__caja" formControlName="nombre" type="text">
+                
+                    <label>Accion:</label>
+                    <input class="principal__formulario__datos__caja" formControlName="accion" type="text">
+                
+                    <label>Responsable:</label>
+                    <input class="principal__formulario__datos__caja" formControlName="responsable" type="text">
+                
+                    <label>Duracion:</label>
+                    <input class="principal__formulario__datos__caja" formControlName="duracion" type="text">
+                
+                    <label>Estado:</label>
+                    <select class="principal__formulario__datos__caja" formControlName="estado" name="" id="">
+                        <option value="">Seleccione...</option>
+                        <option value="Inicio">Inicio</option>
+                        <option value="En Progreso">En Progreso</option>
+                        <option value="Terminado">Terminado</option>
+                    </select>
+                </form>
+            </div>
+    
+        </div>
+    </div>
+
+
+
+</div>

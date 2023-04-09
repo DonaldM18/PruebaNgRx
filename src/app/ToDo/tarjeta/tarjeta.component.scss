@@ -1,0 +1,33 @@
+.principal{
+
+    font-size: 4rem;
+    background-color: #3F3B6C;
+    width: 100rem;
+    border-radius: 2rem;
+    margin: 0 auto;
+    
+    &__titulo{
+        width: 75rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__formulario{
+        text-align: center;
+
+        &__datos{
+            display: flex;
+            flex-direction: column;
+            gap:1.25rem;
+
+            &__boton{
+                margin: 0 auto;
+                width: 50rem;
+                height: 2.25rem;
+            }
+
+        }
+
+    }
+
+}
